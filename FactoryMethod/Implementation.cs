@@ -16,11 +16,11 @@
         {
             switch (_countryCode)
             {
-                case "BE":
-                    Console.WriteLine("BE");
+                case "IND":
+                    Console.WriteLine("IND");
                     return 30;
-                case "ME":
-                    Console.WriteLine("ME");
+                case "US":
+                    Console.WriteLine("US");
                     return 20;
                 default:
                     return 0;
@@ -30,8 +30,8 @@
 
     class CodeDiscountService : IDiscountService
     {
-        Discount _codeCode;
-        public CodeDiscountService(Discount codeCode)
+        DiscountCode _codeCode;
+        public CodeDiscountService(DiscountCode codeCode)
         {
             _codeCode = codeCode;
         }
@@ -39,10 +39,10 @@
         {
             switch (_codeCode)
             {
-                case Discount.BigDiscount:
+                case DiscountCode.BigDiscount:
                     Console.WriteLine("BigDiscount");
                     return 89;
-                case Discount.SmallDiscount:
+                case DiscountCode.SmallDiscount:
                     Console.WriteLine("SmallDiscount");
                     return 29;
                 default:
@@ -71,9 +71,9 @@
 
     class CodeDiscountFactory : DiscountFactory
     {
-        Discount _codeCode;
+        DiscountCode _codeCode;
 
-        public CodeDiscountFactory(Discount codeCode)
+        public CodeDiscountFactory(DiscountCode codeCode)
         {
             _codeCode = codeCode;
         }
@@ -84,9 +84,10 @@
         }
     }
 
-    enum Discount
+    enum DiscountCode
     {
         BigDiscount,
+        MediumDiscount,
         SmallDiscount
     }
 }
