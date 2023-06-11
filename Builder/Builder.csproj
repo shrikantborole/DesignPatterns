@@ -9,6 +9,5 @@
 		<Folder Include="Fluent\" />
 		<Folder Include="Child\" />
 		<Folder Include="Progressive\" />
-		<Folder Include="Simple\" />
 	</ItemGroup>
 </Project>
