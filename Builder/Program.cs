@@ -1,4 +1,5 @@
-﻿using Builder.Fluent;
+﻿using Builder.Child;
+using Builder.Fluent;
 using Builder.Simple;
 
 Console.Title = "Builder";
@@ -9,3 +10,5 @@ simpleBuilder.CallSimpleBuilder();
 //FluentBlogBuilder
 FluentBuilder _fluentBuilder = new FluentBuilder();
 _fluentBuilder.CallFluentBuilder();
+
+//Child Parent Builder
