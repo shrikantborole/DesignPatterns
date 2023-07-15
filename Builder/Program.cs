@@ -12,3 +12,7 @@ FluentBuilder _fluentBuilder = new FluentBuilder();
 _fluentBuilder.CallFluentBuilder();
 
 //Child Parent Builder
+
+//Progressive Builder
+Builder.Progressive.ProgressiveBuilder progressiveBuilder = new Builder.Progressive.ProgressiveBuilder();
+progressiveBuilder.CallProgressiveBuilder();

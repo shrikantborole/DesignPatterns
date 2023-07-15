@@ -1,11 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Builder.Progressive
+﻿namespace Builder.Progressive
 {
+    public class Education
+    {
+        public string Name { get; set; }
+        public bool IsElementary { get; set; }
+        public string Description { get; set; }
+    }
+    public class Work
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public DateTime  StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public bool IsCurrent { get; set; }
+        public string Company { get; set; }
+
+    }
+    public class Resume
+    {
+        public List<Education> Education { get; set; }
+        public List<Work> WorkExperience { get; set; }
+
+    }
     public class ResumeBuilder
     {
         private readonly Resume _resume = new Resume();
@@ -146,10 +162,7 @@ namespace Builder.Progressive
             return _resume;
         }
     }
-    public class Resume
-    {
-
-    }
+   
     public class ProgressiveBuilder
     {
         public void CallProgressiveBuilder()
